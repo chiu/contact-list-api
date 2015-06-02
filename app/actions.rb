@@ -1,7 +1,8 @@
 # Homepage (Root path)
 get '/' do
+  puts "hi"
   # require_relative 'table_manager'
-  TableManager.open_table
+  # TableManager.open_table
   john_attributes = {firstname: 'John', lastname: 'Smith', email: 'johnsmith@gmail.com'}
   john = Contact.new(john_attributes)
   john.save
@@ -32,9 +33,9 @@ puts "meta test"
 puts "find by last name"
 puts Contact.find_all_by_lastname('Smith').class
 
-phone_attributes = {number_of_phone: '4324324324', contact_id: '1'}
-someone_number = Phone.new(phone_attributes)
-someone_number.save
+# phone_attributes = {number_of_phone: '4324324324', contact_id: '1'}
+# someone_number = Phone.new(phone_attributes)
+# someone_number.save
 
 
 def generate_phone_number
@@ -58,14 +59,14 @@ for i in 0..10
 
 end
 
-for i in 0..Contact.count-1
+# for i in 0..Contact.count-1
 
-  phone_attributes = {number_of_phone: generate_phone_number , contact_id: rand(Contact.count)}
-  someone_number = Phone.new(phone_attributes)
-  someone_number.save
+#   phone_attributes = {number_of_phone: generate_phone_number , contact_id: rand(Contact.count)}
+#   someone_number = Phone.new(phone_attributes)
+#   someone_number.save
 
 
-end
+# end
 
 
 erb :index

@@ -24,38 +24,5 @@ where("firstname LIKE ? OR lastname LIKE ? OR email LIKE ?", "%#{search}%","%#{s
 end
 
 
-# #metaprogramming: ruby monk
-# # define_method("test_find_all_by_lastname") do |lastname_argument|
-# #          find_all_universal(lastname_key, lastname_value)
-# #        end
-
-
-# def self.find_all_universal(column_name, name_argument)
-#   where(column_name => name_argument)
-# end
-
-
-
-# class << self
-# def metaprogram
-#  ["firstname", "lastname", "email"].each do |action|
-#     define_method("find_all_by_#{action}") do |argument|
-#       "performing #{action.gsub('_', ' ')} on #{argument}"
-#       find_all_universal(action.to_sym, argument)
-#     end
-#   end
-# end
-
-
-# end
-
-
-
-
-
-
-
-
-
 
 end
