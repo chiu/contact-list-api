@@ -67,7 +67,7 @@ end
 
 
 # end
-
+puts Contact.search_all('Rex').to_json
 
 erb :index
 end

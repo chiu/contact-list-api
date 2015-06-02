@@ -2,6 +2,6 @@
 
 
 
-<%= Contact.search_all('Rex').inspect  %>
+<%= Contact.search_all('Rex').to_json  %>
 
-<= Contact.find_all_by_last_name('Rex')  %>
+<%= Contact.find_all_by_lastname('Smith').to_json  %>
