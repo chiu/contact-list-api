@@ -1,4 +1,10 @@
 # Homepage (Root path)
+# get '/' do
+
+# erb :index
+# end
+
+
 get '/' do
   puts "hi"
   # require_relative 'table_manager'
