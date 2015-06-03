@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src = "../../../javascript/application.js"></script>
+
+</head>
+
+<body>
+
+  <p>
+    Bet amount between 5 and 10:
+    <input type = "number" id="betAmount" value="5" min="5" max="10">
+  </p>
+
+  <p id="bet_feedback" style="height:18px;"></p>
+
+  <p>
+    Guess a number between 1 and 10:
+    <input type = "number" id="userGuess" value="1" min="1" max="10">
+  </p>
+
+  <p id="guess_feedback" style="height:18px;"></p>
+
+  <p>Click the button place your bet.</p>
+
+  
+
+  <p> Your remaining money: </p>
+  <p id="user_money_left"></p>
+  <p> ------------- </p>
+  
+  <div> Random Number of Last Round: </div>
+  <div id="last_round_random"></div>
+
+
+  <p> Result of last round: </p>
+  <p id="last_round_result"></p>
+
+ <!--  <button onclick="myFunction()">Make Bet</button>
+ <button onclick="resetMoney()">Reset Money</button> -->
+ <button id = "betButton"> Make a Bet! </button>
+ <button id = "resetMoney"> Reset Money </button>
+
+
+  <div id="stockpile">
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+    <div>cash</div>
+
+
+
+  </div>
+
+
+</body>
+</html>

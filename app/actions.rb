@@ -45,3 +45,11 @@ get '/gui/contacts/' do
   Contact.all.to_json
   erb :'contacts/index'
 end
+
+
+get '/gui/contacts/:id' do
+  @contact = Contact.find(params[:id])
+  return status 404 if @contact.nil?
+  # @contact.to_json
+  erb :'contacts/show'
+end

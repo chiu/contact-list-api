@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="../../../public/javascript/application.js"></script>
+
+</head>
+
+
+<h1>Home Page</h1>
+
+
+
+<body>
+  <p>
+    Firstname:
+    <%= @contact.firstname %> 
+  </p>
+
+
+  <p>Lastname:  
+    <%= @contact.lastname %>
+  </p>
+
+  <p>email:  
+    <%= @contact.email %>
+  </p>
+
+
+  <button id = "delete_button"> delete meh . </button>
+
+  <p id="rabbit"></p>
+  <p> heya </p>
+
+
+
+
+  <script> $("#rabbit").prepend("<h3> yolo <h3>") </script>
+  <!-- <script src="../javascript/application.js"></script> -->
+
+</body>
+</html>
+
+
