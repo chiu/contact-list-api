@@ -23,11 +23,11 @@ $(document).ready(function(){
 
    function showAllContacts(){
 
-     $.getJSON("/contacts/", function( monkey ){
+     $.getJSON("/contacts/", function( data ){
 
-      console.log(JSON.stringify(monkey));
-      ar items = [];
-      $.each( monkey, function( key, val ) {
+      console.log(JSON.stringify(data));
+      var items = [];
+      $.each( data, function( key, val ) {
         items.push( "<li id='" + key + "'>" + val + "</li>" );
       });
 
@@ -35,7 +35,6 @@ $(document).ready(function(){
         "class": "my-new-list",
         html: items.join( "" )
       }).appendTo( "body" );
-
 
     });
 
