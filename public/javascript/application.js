@@ -73,6 +73,22 @@ function searchEmailContacts()
   });
 }
 
+
+function addNewContact()
+{
+
+  var term = 'John';
+   term = $('#firstname_field').val();
+   console.log(typeof(term));
+  console.log("term below");
+  console.log(term);
+  console.log("term above");
+  $.getJSON("/contacts/email/" + term , function(data)
+  {
+    renderContacts(data);
+  });
+}
+
 $("#show_all_contacts").on('click', showAllContacts);
 
 
@@ -82,6 +98,8 @@ $("#show_search_results").on('click', searchFirstNameContacts);
 $("#show_search_results_last_name").on('click', searchLastNameContacts);
 
 $("#show_search_results_email").on('click', searchEmailContacts);
+
+$("#add_new_contacts").on('click', addNewContact)
 
 
 
