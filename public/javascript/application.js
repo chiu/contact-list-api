@@ -34,7 +34,7 @@ $(document).ready(function(){
 
         // var obj = JSON.parse(val);
         // console.log(obj);
-        items.push( "<li id='" + key + "'>" + typeof(val) + "</li>" );
+        items.push( "<li id='" + key + "'>" + val.firstname + "; " + val.lastname + " ;" + val.email+ "</li>" );
       });
 
       $( "<ul/>", {
