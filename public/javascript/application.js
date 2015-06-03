@@ -27,7 +27,7 @@ function showAllContacts()
   });
 }
 
-function searchContacts()
+function searchFirstNameContacts()
 {
 
   var term = 'John';
@@ -42,12 +42,29 @@ function searchContacts()
   });
 }
 
+function searchLastNameContacts()
+{
+
+  var term = 'John';
+   term = $('#firstname_field').val();
+   console.log(typeof(term));
+  console.log("term below");
+  console.log(term);
+  console.log("term above");
+  $.getJSON("/contacts/lastname/" + term , function(data)
+  {
+    renderContacts(data);
+  });
+}
+
 $("#show_all_contacts").on('click', showAllContacts);
 
 
-$("#show_search_results").on('click', searchContacts);
-// $("#betButton").click(betMoney);
-// $("#resetMoney").click(resetMoney);
-// $("#betAmount").on('change', updateBetAmount);
-// $("#userGuess").on('change', updateGuess);
+$("#show_search_results").on('click', searchFirstNameContacts);
+
+
+$("#show_search_results_last_name").on('click', searchLastNameContacts);
+
+
+
 });
