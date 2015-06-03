@@ -29,8 +29,14 @@ function showAllContacts()
 
 function searchContacts()
 {
-  var term = $('#firstname').text();
-  $.getJSON("/contacts/firstname/" + term, function(data)
+
+  var term = 'John';
+   term = $('#firstname_field').val();
+   console.log(typeof(term));
+  console.log("term below");
+  console.log(term);
+  console.log("term above");
+  $.getJSON("/contacts/firstname/" + term , function(data)
   {
     renderContacts(data);
   });
@@ -39,7 +45,7 @@ function searchContacts()
 $("#show_all_contacts").on('click', showAllContacts);
 
 
-$("#search_all_results").on('click', searchContacts)
+$("#show_search_results").on('click', searchContacts);
 // $("#betButton").click(betMoney);
 // $("#resetMoney").click(resetMoney);
 // $("#betAmount").on('change', updateBetAmount);
