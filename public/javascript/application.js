@@ -29,8 +29,8 @@ function showAllContacts()
 
 function searchContacts()
 {
-  var term = $('.searchbox').text();
-  $.getJSON("/contacts/search?term=" + term, function(data)
+  var term = $('#firstname').text();
+  $.getJSON("/contacts/firstname/" + term, function(data)
   {
     renderContacts(data);
   });
@@ -39,6 +39,7 @@ function searchContacts()
 $("#show_all_contacts").on('click', showAllContacts);
 
 
+$("#search_all_results").on('click', searchContacts)
 // $("#betButton").click(betMoney);
 // $("#resetMoney").click(resetMoney);
 // $("#betAmount").on('change', updateBetAmount);
