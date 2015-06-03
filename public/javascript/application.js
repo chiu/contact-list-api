@@ -29,8 +29,8 @@ $(document).ready(function(){
       var items = [];
       $.each( data, function( key, val ) {
         var rawData = JSON.stringify(val);
-        var parsed = JSON.parse(rawData);
-        items.push( "<li id='" + key + "'>" + rawData + "</li>" );
+        var parsed = JSON.parse(val);
+        items.push( "<li id='" + key + "'>" + "hi" + "</li>" );
       });
 
       $( "<ul/>", {
