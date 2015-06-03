@@ -3,11 +3,8 @@ $(function()
 {
   "use strict";
 
- function showAllContacts(){
-
-   $.getJSON("/contacts/", function( data )
-   {
-
+  function renderContacts(data)
+  {
     var items = data.map(function(val)
     {
       return "<li id='contact_" + val.id + "'>" + val.firstname + "; " + val.lastname + " ;" + val.email+ "</li>";
@@ -20,14 +17,26 @@ $(function()
       "class": "my-new-list",
       html: items.join( "" )
     }).appendTo( "body" );
+  }
+
+function showAllContacts()
+{
+  $.getJSON("/contacts/", function(data)
+  {
+    renderContacts(data);
   });
+}
 
+function searchContacts()
+{
+  var term = $('.searchbox').text();
+  $.getJSON("/contacts/search?term=" + term, function(data)
+  {
+    renderContacts(data);
+  });
+}
 
-
- }
-
- 
- $("#show_all_contacts").on('click', showAllContacts);
+$("#show_all_contacts").on('click', showAllContacts);
 
 
 // $("#betButton").click(betMoney);
@@ -35,5 +44,3 @@ $(function()
 // $("#betAmount").on('change', updateBetAmount);
 // $("#userGuess").on('change', updateGuess);
 });
-
-
