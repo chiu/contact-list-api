@@ -28,7 +28,9 @@ $(document).ready(function(){
       console.log(JSON.stringify(data));
       var items = [];
       $.each( data, function( key, val ) {
-        items.push( "<li id='" + key + "'>" + val + "</li>" );
+        var rawData = JSON.stringify(val);
+        var parsed = JSON.parse(rawData);
+        items.push( "<li id='" + key + "'>" + rawData + "</li>" );
       });
 
       $( "<ul/>", {
