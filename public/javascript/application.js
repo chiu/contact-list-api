@@ -30,7 +30,11 @@ $(document).ready(function(){
       $.each( data, function( key, val ) {
         var rawData = JSON.stringify(val);
         var parsed = JSON.parse(rawData);
-        items.push( "<li id='" + key + "'>" + "hi" + "</li>" );
+
+
+        // var obj = JSON.parse(val);
+        // console.log(obj);
+        items.push( "<li id='" + key + "'>" + typeof(val) + "</li>" );
       });
 
       $( "<ul/>", {
