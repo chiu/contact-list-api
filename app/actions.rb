@@ -1,10 +1,10 @@
 
 get '/contacts/' do
-  Contact.all.to_json
+  json Contact.all #use this for JSON endpoints
 end
 
 get '/contacts' do
-  Contact.all.to_json
+  json Contact.all
 end
 
 get '/contacts/:id' do
